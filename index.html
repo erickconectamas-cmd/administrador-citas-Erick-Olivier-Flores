@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrador de Citas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Administrador de Citas</h1>
+
+    <!-- LOGIN -->
+    <div id="loginSection">
+      <h2>Iniciar Sesión</h2>
+      <input type="text" id="usuario" placeholder="Usuario">
+      <input type="password" id="password" placeholder="Contraseña">
+      <button onclick="login()">Entrar</button>
+      <p id="mensajeLogin"></p>
+    </div>
+
+    <!-- PANEL PRINCIPAL -->
+    <div id="appSection" style="display: none;">
+      <h2>Nueva Cita</h2>
+      <input type="text" id="nombre" placeholder="Nombre del paciente">
+      <input type="date" id="fecha">
+      <input type="time" id="hora">
+      <input type="text" id="motivo" placeholder="Motivo de la cita">
+      <button onclick="agregarCita()">Agregar Cita</button>
+
+      <h2>Lista de Citas</h2>
+      <div id="listaCitas"></div>
+
+      <button class="salir" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
